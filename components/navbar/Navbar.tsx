@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Logo from "../logo/Logo";
 import Searchbar from "../searchbar/Searchbar";
 import NavbarSignedIn from "./navbar-signed-in/NavbarSignedIn";
 import NavbarNotSignedIn from "./navbar-not-signed-in/NavbarNotSignedIn";
