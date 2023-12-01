@@ -32,6 +32,11 @@ video {
   max-width: 100%;
 }
 
+.custom-grid {
+  display: grid;
+  grid-template-columns: 3fr 6fr 3fr;
+}
+
 .grid-aside {
   display: grid;
   grid-template-columns: 1fr;
@@ -62,21 +67,6 @@ video {
 
 .footer-5 {
   grid-area: e;
-}
-
-.rainbow {
-  background: linear-gradient(
-    to right,
-    red,
-    orange,
-    rgb(151, 151, 0),
-    green,
-    blue,
-    indigo,
-    violet
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .navbar-canvas-backdrop {
