@@ -28,10 +28,7 @@ const NavbarAvatarDropdown = () => {
         </Link>
       </div>
       <div className="py-2 border-t border-zinc-700 block">
-        <ButtonLogout
-          padding="px-3"
-          className="w-full text-start block py-2 bg-zinc-900 duration-200 ease-out hover:bg-zinc-800 rounded"
-        />
+        <ButtonLogout />
       </div>
     </div>
   );
