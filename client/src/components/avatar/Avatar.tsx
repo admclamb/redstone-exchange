@@ -1,3 +1,5 @@
+import defaultAvatar from "./default_avatar.jpg";
+
 type Props = {
   avatarUrl?: string;
   width?: string;
@@ -6,7 +8,7 @@ type Props = {
 };
 
 const Avatar = ({
-  avatarUrl = "/default_avatar.jpg",
+  avatarUrl = defaultAvatar,
   width = "w-12",
   height = "h-12",
   id,
