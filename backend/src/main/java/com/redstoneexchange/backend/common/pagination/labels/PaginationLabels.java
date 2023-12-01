@@ -1,4 +1,4 @@
-package com.redstoneexchange.backend.pagination.labels;
+package com.redstoneexchange.backend.common.pagination.labels;
 
 public class PaginationLabels {
     public static final String PAGE_NOT_BLANK = "Page cannot be undefined";

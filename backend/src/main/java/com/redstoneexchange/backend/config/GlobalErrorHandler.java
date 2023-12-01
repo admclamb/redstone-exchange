@@ -1,6 +1,6 @@
 package com.redstoneexchange.backend.config;
 
-import com.algowars.core.data.models.ErrorMessage;
+import com.redstoneexchange.backend.data.models.ErrorMessage;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

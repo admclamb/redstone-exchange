@@ -1,6 +1,6 @@
-package com.redstoneexchange.backend.pagination.dtos;
+package com.redstoneexchange.backend.common.pagination.dtos;
 
-import com.algowars.core.common.pagination.labels.PaginationLabels;
+import com.redstoneexchange.backend.common.pagination.labels.PaginationLabels;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;

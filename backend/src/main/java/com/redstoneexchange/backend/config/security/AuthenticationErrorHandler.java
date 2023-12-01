@@ -1,6 +1,6 @@
 package com.redstoneexchange.backend.config.security;
 
-import com.algowars.core.data.models.ErrorMessage;
+import com.redstoneexchange.backend.data.models.ErrorMessage;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

@@ -1,4 +1,4 @@
-package com.redstoneexchange.backend.pagination.dtos;
+package com.redstoneexchange.backend.common.pagination.dtos;
 
 import java.util.List;
 

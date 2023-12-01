@@ -1,10 +1,7 @@
-package com.redstoneexchange.backend.pagination.mapper;
+package com.redstoneexchange.backend.common.pagination.mapper;
 
-import com.algowars.core.common.pagination.dtos.PaginationResponse;
+import com.redstoneexchange.backend.common.pagination.dtos.PaginationResponse;
 import org.springframework.data.domain.Page;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class PaginationMapper {
 
