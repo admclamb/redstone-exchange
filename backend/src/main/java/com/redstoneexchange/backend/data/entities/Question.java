@@ -1,2 +1,4 @@
-package com.redstoneexchange.backend.data.entities;public class Question {
+package com.redstoneexchange.backend.data.entities;
+
+public class Question {
 }

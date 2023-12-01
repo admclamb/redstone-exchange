@@ -1,4 +1,4 @@
-package com.algowars.core.config;
+package com.redstoneexchange.backend.config;
 
 import com.algowars.core.data.models.ErrorMessage;
 import jakarta.servlet.http.HttpServletRequest;

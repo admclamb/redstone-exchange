@@ -1,4 +1,4 @@
-package com.algowars.core.common.pagination.mapper;
+package com.redstoneexchange.backend.pagination.mapper;
 
 import com.algowars.core.common.pagination.dtos.PaginationResponse;
 import org.springframework.data.domain.Page;

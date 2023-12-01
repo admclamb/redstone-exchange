@@ -1,4 +1,4 @@
-package com.algowars.core.config.security;
+package com.redstoneexchange.backend.config.security;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

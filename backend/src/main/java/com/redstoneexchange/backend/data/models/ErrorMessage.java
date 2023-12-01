@@ -1,4 +1,4 @@
-package com.algowars.core.data.models;
+package com.redstoneexchange.backend.data.models;
 
 import lombok.Value;
 

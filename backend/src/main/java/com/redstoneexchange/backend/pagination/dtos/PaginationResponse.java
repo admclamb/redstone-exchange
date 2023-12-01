@@ -1,4 +1,4 @@
-package com.algowars.core.common.pagination.dtos;
+package com.redstoneexchange.backend.pagination.dtos;
 
 import java.util.List;
 

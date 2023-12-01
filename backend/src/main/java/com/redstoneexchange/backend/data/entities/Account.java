@@ -1,6 +1,5 @@
-package com.algowars.core.data.entities;
+package com.redstoneexchange.backend.data.entities;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -34,9 +33,6 @@ public class Account {
     @LastModifiedDate
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
-
-    @OneToMany(mappedBy = "createdBy", cascade = CascadeType.DETACH, fetch = FetchType.LAZY)
-    private List<Problem> createdProblems;
 
     public Long getId() {
         return id;
@@ -76,13 +72,5 @@ public class Account {
 
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
-    }
-
-    public List<Problem> getCreatedProblems() {
-        return createdProblems;
-    }
-
-    public void setCreatedProblems(List<Problem> createdProblems) {
-        this.createdProblems = createdProblems;
     }
 }

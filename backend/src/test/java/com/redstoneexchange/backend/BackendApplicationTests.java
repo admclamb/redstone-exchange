@@ -1,10 +1,10 @@
-package com.algowars.core;
+package com.redstoneexchange.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CoreApplicationTests {
+class BackendApplicationTests {
 
 	@Test
 	void contextLoads() {
