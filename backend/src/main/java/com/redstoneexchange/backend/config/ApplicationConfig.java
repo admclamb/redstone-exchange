@@ -15,6 +15,7 @@ public class ApplicationConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(final CorsRegistry registry) {
+        System.out.println(applicationProps.getClientOriginUrl());
         registry.addMapping("/**")
                 .allowedOrigins(applicationProps.getClientOriginUrl())
                 .allowedHeaders(HttpHeaders.AUTHORIZATION, HttpHeaders.CONTENT_TYPE)

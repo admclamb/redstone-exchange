@@ -16,14 +16,10 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @NotBlank
-    @Size(max = 100)
-    @Column(length = 100)
+    @Column(nullable = false, unique = true, length = 100)
     private String userId;
 
-    @NotBlank
-    @Size(max=100)
-    @Column(length = 100, unique = true)
+    @Column(length = 100, unique = true, nullable = false)
     private String username;
 
     @CreatedDate

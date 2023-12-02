@@ -13,7 +13,7 @@ const ButtonLogout = () => {
 
   return (
     <button
-      className="px-3 w-full text-start block py-2 bg-gray-900 duration-200 ease-out hover:bg-gray-800 rounded"
+      className="px-3 w-full text-start block py-2 bg-zinc-900 duration-200 ease-out hover:bg-zinc-800 rounded"
       onClick={handleLogout}
     >
       Log Out
