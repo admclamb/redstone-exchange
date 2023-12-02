@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
 type Props = {
@@ -11,7 +12,7 @@ const ButtonPrimary = ({ children, className = "px-3 py-2", href }: Props) => {
     return (
       <Link
         to={href}
-        className={`${className} bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 border-b-4 border-green-800 hover:border-green-800 rounded`}
+        className={`${className} text-white bg-green-600 hover:bg-green-700 active:bg-green-800 duration-200 ease-out py-2 px-4 rounded`}
       >
         {children}
       </Link>
@@ -19,7 +20,7 @@ const ButtonPrimary = ({ children, className = "px-3 py-2", href }: Props) => {
   }
   return (
     <button
-      className={`${className} bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 border-b-4 border-green-800 hover:border-green-800 rounded`}
+      className={`${className} text-white bg-green-600 hover:bg-green-700 active:bg-green-800 duration-200 ease-out py-2 px-4 rounded`}
     >
       {children}
     </button>

@@ -16,4 +16,8 @@ public class AccountService {
     public Account findBySub(String sub) {
        return accountRepository.findByUserId(sub);
     }
+
+    public Account save(Account account) {
+        return accountRepository.save(account);
+    }
 }

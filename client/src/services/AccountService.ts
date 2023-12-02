@@ -31,9 +31,27 @@ const isAccountSetup = (sub: string): Promise<ApiResponse<boolean>> => {
   return api.callExternalApi<boolean>({ config });
 };
 
+const setupAccount = (
+  username: string,
+  sub: string
+): Promise<ApiResponse<AccountModel>> => {
+  const config: AxiosRequestConfig = {
+    url: "/api/v1/account/create",
+    data: {
+      username,
+      sub,
+    },
+    method: "POST",
+  };
+
+  return api.callExternalApi<AccountModel>({ config });
+};
+
 const AccountService = {
   getAccountBySub,
   isAccountSetup,
+  setupAccount,
 };
+
 Object.freeze(AccountService);
 export default AccountService;

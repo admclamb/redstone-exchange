@@ -1,4 +1,4 @@
-import ButtonPrimary from "../../components/button/button-primary/ButtonPrimary";
+import ButtonPrimary3D from "../../components/button/button-primary-3d/ButtonPrimary3d";
 import Layout from "../../layout/Layout";
 
 const HomePage = () => {
@@ -9,7 +9,7 @@ const HomePage = () => {
         <section>
           <header className="flex justify-between items-center">
             <h4 className="text-3xl font-semibold">Questions</h4>
-            <ButtonPrimary href="/ask">Ask a question</ButtonPrimary>
+            <ButtonPrimary3D href="/ask">Ask a Question</ButtonPrimary3D>
           </header>
         </section>
         <section></section>
