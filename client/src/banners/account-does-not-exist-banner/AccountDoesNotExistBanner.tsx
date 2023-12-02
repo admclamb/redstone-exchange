@@ -6,16 +6,12 @@ import { useAuth0 } from "@auth0/auth0-react";
 const AccountDoesNotExistBanner = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const { user, getAccessTokenSilently } = useAuth0();
+  const { user } = useAuth0();
 
   useEffect(() => {
     (async () => {
       if (user?.sub) {
-        const accessToken = await getAccessTokenSilently();
-        const { data } = await AccountService.isAccountSetup(
-          user.sub,
-          accessToken
-        );
+        const { data } = await AccountService.isAccountSetup(user.sub);
         setIsOpen(data === false);
       }
     })();

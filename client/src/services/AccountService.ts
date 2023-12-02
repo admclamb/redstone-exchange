@@ -1,7 +1,7 @@
 import { AxiosRequestConfig } from "axios";
 import { AccountModel } from "../models/AccountModel";
 import { ApiResponse } from "../models/ApiResponseModel";
-import api from "./api";
+import api from "./Api";
 
 const getAccountBySub = (
   sub: string,
@@ -20,10 +20,7 @@ const getAccountBySub = (
   return api.callExternalApi<AccountModel>({ config });
 };
 
-const isAccountSetup = (
-  sub: string,
-  accessToken: string
-): Promise<ApiResponse<boolean>> => {
+const isAccountSetup = (sub: string): Promise<ApiResponse<boolean>> => {
   const config: AxiosRequestConfig = {
     url: "/api/v1/account/account-is-setup",
     params: {
