@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import themeReducer from "../slices/themeSlice";
+import accountReducer from "../slices/accountSlice";
 
 const store = configureStore({
   reducer: {
     theme: themeReducer,
+    account: accountReducer,
   },
 });
 

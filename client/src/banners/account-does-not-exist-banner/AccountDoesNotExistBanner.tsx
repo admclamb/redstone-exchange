@@ -2,20 +2,27 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AccountService from "../../services/AccountService";
 import { useAuth0 } from "@auth0/auth0-react";
+import { useAppSelector } from "../../hooks/useAppSelector";
 
 const AccountDoesNotExistBanner = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const { user } = useAuth0();
+  const { user, getAccessTokenSilently } = useAuth0();
+
+  const { account } = useAppSelector((state) => state.account);
 
   useEffect(() => {
     (async () => {
-      if (user?.sub) {
-        const { data } = await AccountService.isAccountSetup(user.sub);
+      if (user?.sub && !account.username) {
+        const accessToken = await getAccessTokenSilently();
+        const { data } = await AccountService.isAccountSetup(
+          user.sub,
+          accessToken
+        );
         setIsOpen(data === false);
       }
     })();
-  }, [user?.sub]);
+  }, [account.username, getAccessTokenSilently, user?.sub]);
 
   return isOpen ? (
     <div className="flex justify-center  items-center gap-5 p-1 text-sm bg-green-800 text-white">

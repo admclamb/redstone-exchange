@@ -25,14 +25,13 @@ const AccountSetupPage = () => {
 
   const saveAccount = async (event: FormEvent) => {
     event.preventDefault();
-    console.log(username, user);
+    setError(null);
     if (user?.sub) {
       const { data, error } = await AccountService.setupAccount(
         username,
         user?.sub
       );
       if (data) {
-        console.log(data);
         dispatch(setAccount(data));
         navigate(-1);
       }
@@ -49,7 +48,11 @@ const AccountSetupPage = () => {
       <div className="container mx-auto flex justify-center items-center min-h-[50vh]">
         <div className="flex flex-col items-center gap-5 py-5">
           <RedstoneLogo width="w-[5rem]" />
-          <ErrorAlert error={error} setError={setError} />
+          <ErrorAlert
+            error={error}
+            setError={setError}
+            className="w-full text-center"
+          />
           <div className="border rounded border-zinc-300 bg-white p-5 flex flex-col gap-5 w-[25rem]">
             <header className="text-center flex flex-col gap-2">
               <h4 className="text-xl font-semibold">Account Setup</h4>

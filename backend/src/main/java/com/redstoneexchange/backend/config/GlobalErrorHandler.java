@@ -33,10 +33,10 @@ public class GlobalErrorHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Object> handleValidationError(MethodArgumentNotValidException ex) {
         Map<String, String> errors = new HashMap<>();
-        ex.getBindingResult().getAllErrors().forEach((error) ->{
-           String fieldName = ((FieldError) error).getField();
-           String message = error.getDefaultMessage();
-           errors.put(fieldName, message);
+        ex.getBindingResult().getAllErrors().forEach((error) -> {
+            String fieldName = ((FieldError) error).getField();
+            String message = error.getDefaultMessage();
+            errors.put(fieldName, message);
         });
         return new ResponseEntity<Object>(errors, HttpStatus.BAD_REQUEST);
     }
@@ -44,7 +44,6 @@ public class GlobalErrorHandler {
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler(Throwable.class)
     public ErrorMessage handleInternalError(final HttpServletRequest request, final Exception error) {
-        System.out.println("=> " + error.getMessage());
         return ErrorMessage.from(error.getMessage());
     }
 }
