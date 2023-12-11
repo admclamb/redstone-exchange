@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import redstoneLogo from "../../../../public/favicon.ico";
+import redstoneLogo from "../redstone.png";
 
 type Props = {
   width?: string;
