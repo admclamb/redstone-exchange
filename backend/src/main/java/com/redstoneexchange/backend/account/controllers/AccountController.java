@@ -16,7 +16,6 @@ import java.util.Date;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("api/v1/account")
-@CrossOrigin(origins = "http://localhost:5173")
 public class AccountController {
 
     private final AccountService accountService;

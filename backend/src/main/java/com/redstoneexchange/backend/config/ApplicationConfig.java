@@ -15,10 +15,11 @@ public class ApplicationConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(final CorsRegistry registry) {
+        System.out.println("ORIGIN URL: " + applicationProps.getClientOriginUrl());
         registry.addMapping("/**")
                 .allowedOrigins(applicationProps.getClientOriginUrl())
                 .allowedHeaders(HttpHeaders.AUTHORIZATION, HttpHeaders.CONTENT_TYPE)
-                .allowedMethods(HttpMethod.GET.name())
+                .allowedMethods(HttpMethod.GET.name(), HttpMethod.POST.name())
                 .maxAge(86400);
     }
 }

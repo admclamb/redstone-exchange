@@ -17,17 +17,16 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
     private final AuthenticationErrorHandler authenticationErrorHandler;
-@Bean
+
+    @Bean
     public SecurityFilterChain httpSecurity(final HttpSecurity http) throws Exception {
         return http
-                .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/v1/account").permitAll())
+                .authorizeHttpRequests(authz -> authz
+                        .requestMatchers("/api/v1/account/**").authenticated()
+                        .anyRequest().permitAll())
                 .cors(Customizer.withDefaults())
-                .csrf(AbstractHttpConfigurer::disable)
-                .oauth2ResourceServer(oauth2 -> oauth2
-                        .jwt(jwt -> jwt.jwtAuthenticationConverter(makePermissionsConverter()))
-                        .authenticationEntryPoint(authenticationErrorHandler))
-                .build();
+                .oauth2ResourceServer()
+                .jwt()
     }
 
     private JwtAuthenticationConverter makePermissionsConverter() {
