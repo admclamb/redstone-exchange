@@ -1,13 +1,12 @@
-package com.example.helloworld.config;
+package com.example.redstoneexchange.backend.config;
 
+import com.example.redstoneexchange.backend.models.ErrorMessage;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.NoHandlerFoundException;
-
-import com.example.helloworld.models.ErrorMessage;
 
 import jakarta.servlet.http.HttpServletRequest;
 

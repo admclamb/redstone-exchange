@@ -1,4 +1,4 @@
-package com.example.helloworld.models;
+package com.example.redstoneexchange.backend.models;
 
 import lombok.Value;
 

@@ -1,12 +1,12 @@
-package com.example.helloworld.controllers;
+package com.example.redstoneexchange.backend.controllers;
 
+import com.example.redstoneexchange.backend.services.MessageService;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.helloworld.models.Message;
-import com.example.helloworld.services.MessageService;
+import com.example.redstoneexchange.backend.models.Message;
 
 import lombok.RequiredArgsConstructor;
 

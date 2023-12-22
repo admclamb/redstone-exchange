@@ -1,4 +1,4 @@
-package com.example.helloworld;
+package com.example.redstoneexchange.backend;
 
 import static java.util.Arrays.stream;
 
@@ -12,7 +12,7 @@ import lombok.extern.log4j.Log4j2;
 @Log4j2
 @SpringBootApplication
 @ConfigurationPropertiesScan
-public class HelloWorldApplication {
+public class BackendApplication {
 
     enum DotEnv {
         PORT,
@@ -24,7 +24,7 @@ public class HelloWorldApplication {
     public static void main(final String[] args) {
         dotEnvSafeCheck();
 
-        SpringApplication.run(HelloWorldApplication.class, args);
+        SpringApplication.run(BackendApplication.class, args);
     }
 
     private static void dotEnvSafeCheck() {

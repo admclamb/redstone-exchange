@@ -1,4 +1,4 @@
-package com.example.helloworld.config.security;
+package com.example.redstoneexchange.backend.config.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

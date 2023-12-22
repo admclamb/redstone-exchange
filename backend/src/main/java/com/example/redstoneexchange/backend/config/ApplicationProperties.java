@@ -1,4 +1,4 @@
-package com.example.helloworld.config;
+package com.example.redstoneexchange.backend.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.bind.ConstructorBinding;

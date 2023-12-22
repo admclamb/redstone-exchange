@@ -1,8 +1,8 @@
-package com.example.helloworld.services;
+package com.example.redstoneexchange.backend.services;
 
 import org.springframework.stereotype.Service;
 
-import com.example.helloworld.models.Message;
+import com.example.redstoneexchange.backend.models.Message;
 
 @Service
 public class MessageService {
