@@ -1,5 +1,4 @@
 import { AxiosRequestConfig } from "axios";
-import { AccountModel } from "../models/AccountModel";
 import { ApiResponse } from "../models/ApiResponseModel";
 import { MessageModel } from "../models/MessageModel";
 import api from "./Api";
