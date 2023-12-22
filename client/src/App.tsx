@@ -8,30 +8,29 @@ import { useEffect, useState } from "react";
 import AccountService from "./services/AccountService";
 
 const App = () => {
-  const { isAuthenticated, isLoading, user, getAccessTokenSilently } =
-    useAuth0();
-  const [isAccountLoading, setIsAccountLoading] = useState<boolean>(false);
+  const { isAuthenticated, isLoading } = useAuth0();
+  // const [isAccountLoading, setIsAccountLoading] = useState<boolean>(false);
 
-  const dispatch = useAppDispatch();
+  // const dispatch = useAppDispatch();
 
-  useEffect(() => {
-    (async () => {
-      setIsAccountLoading(true);
-      if (user?.sub) {
-        const accessToken = await getAccessTokenSilently();
-        const { data } = await AccountService.getAccountBySub(
-          user.sub,
-          accessToken
-        );
-        if (data) {
-          dispatch(setAccount(data));
-        }
-      }
-      setIsAccountLoading(false);
-    })();
-  }, [user?.sub]);
+  // useEffect(() => {
+  //   (async () => {
+  //     setIsAccountLoading(true);
+  //     if (user?.sub) {
+  //       const accessToken = await getAccessTokenSilently();
+  //       const { data } = await AccountService.getAccountBySub(
+  //         user.sub,
+  //         accessToken
+  //       );
+  //       if (data) {
+  //         dispatch(setAccount(data));
+  //       }
+  //     }
+  //     setIsAccountLoading(false);
+  //   })();
+  // }, [user?.sub]);
 
-  if (isLoading || isAccountLoading) {
+  if (isLoading) {
     return (
       <div className="page-layout">
         <PageLoader />
@@ -41,7 +40,7 @@ const App = () => {
 
   return (
     <>
-      {isAuthenticated ? <AccountDoesNotExistBanner /> : null}
+      {/* {isAuthenticated ? <AccountDoesNotExistBanner /> : null} */}
       <PageRoutes />
     </>
   );
