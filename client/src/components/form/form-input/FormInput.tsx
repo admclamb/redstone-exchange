@@ -1,10 +1,12 @@
-import React from "react";
+import { ChangeEvent } from "react";
 
 type Props = {
   border?: string;
   className?: string;
   padding?: string;
   placeHolder?: string;
+  value: string;
+  changeValue: (event: ChangeEvent<HTMLInputElement>) => void;
 };
 
 const FormInput = ({
@@ -12,11 +14,15 @@ const FormInput = ({
   className = "",
   padding = "p-2",
   placeHolder = "",
+  value,
+  changeValue,
 }: Props) => {
   return (
     <input
       className={`${border} ${padding} ${className}`}
       placeholder={placeHolder}
+      value={value}
+      onChange={changeValue}
     />
   );
 };

@@ -1,9 +1,13 @@
 import MDEditor from "@uiw/react-md-editor";
-import { useAskQuestionEditor } from "./AskQuestionEditor.hooks";
+
 import rehypeSanitize from "rehype-sanitize";
 
-const AskQuestionEditor = () => {
-  const { body, changeBody } = useAskQuestionEditor();
+type Props = {
+  body: string;
+  changeBody: (value: string | undefined) => void;
+};
+
+const AskQuestionEditor = ({ body, changeBody }: Props) => {
   return (
     <div>
       <MDEditor
