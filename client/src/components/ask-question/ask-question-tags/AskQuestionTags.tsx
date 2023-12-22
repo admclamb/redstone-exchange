@@ -31,7 +31,7 @@ const AskQuestionTags = ({ tags, setTags }: Props) => {
         {tags.map((tag, index) => (
           <li
             key={tag.name}
-            className="px-1 py-0.5 bg-green-200 text-green-800 rounded text-white text-sm flex items-center gap-1"
+            className="px-1 py-0.5 bg-green-200 text-green-800 rounded text-sm flex items-center gap-1"
           >
             <span>{tag.name}</span>
             <button

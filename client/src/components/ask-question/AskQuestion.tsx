@@ -21,6 +21,10 @@ const AskQuestion = () => {
 
   return (
     <div className="flex flex-col gap-5">
+      <header>
+        <h2 className="text-xl font-semibold">Ask a Question</h2>
+        <p>This question will be available to the public.</p>
+      </header>
       <Card className="flex flex-col gap-5">
         <div className="flex flex-col gap-3">
           <div>

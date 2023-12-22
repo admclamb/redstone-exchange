@@ -16,6 +16,5 @@ export class Category {
   name: string;
 
   @ManyToMany(() => Question)
-  @JoinTable()
   questions: Question[];
 }

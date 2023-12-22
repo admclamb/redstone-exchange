@@ -1,17 +1,16 @@
 import AskQuestion from "../../../components/ask-question/AskQuestion";
-import Container from "../../../components/container/Container";
+import ContainerMedium from "../../../components/container/container-medium/ContainerMedium";
 import Layout from "../../../layout/Layout";
 
 const QuestionsAskPage = () => {
   return (
     <Layout>
-      <Container className="grid-with-aside py-5">
-        <aside></aside>
+      <ContainerMedium className="grid-aside gap-5 py-5">
         <section>
           <AskQuestion />
         </section>
-        <div></div>
-      </Container>
+        <aside></aside>
+      </ContainerMedium>
     </Layout>
   );
 };

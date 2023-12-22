@@ -10,6 +10,12 @@ import entities from './data-model';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { QuestionModule } from './question/question.module';
 import { CategoryModule } from './category/category.module';
+import { ImageModule } from './image/image.module';
+import { ReactionModule } from './reaction/reaction.module';
+import { SavesModule } from './saves/saves.module';
+import { AnswerModule } from './answer/answer.module';
+import { CommentModule } from './comment/comment.module';
+import { ExperienceModule } from './experience/experience.module';
 
 @Module({
   imports: [
@@ -35,6 +41,12 @@ import { CategoryModule } from './category/category.module';
     AccountModule,
     QuestionModule,
     CategoryModule,
+    ImageModule,
+    ReactionModule,
+    SavesModule,
+    AnswerModule,
+    CommentModule,
+    ExperienceModule,
   ],
   controllers: [],
   providers: [],
