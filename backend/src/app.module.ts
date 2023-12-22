@@ -8,6 +8,8 @@ import { AccountModule } from './account/account.module';
 
 import entities from './data-model';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { QuestionModule } from './question/question.module';
+import { CategoryModule } from './category/category.module';
 
 @Module({
   imports: [
@@ -31,6 +33,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     MessagesModule,
     CommonModule,
     AccountModule,
+    QuestionModule,
+    CategoryModule,
   ],
   controllers: [],
   providers: [],

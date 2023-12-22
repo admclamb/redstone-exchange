@@ -42,6 +42,11 @@ video {
   grid-template-columns: 1fr;
 }
 
+.grid-with-aside {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -165,7 +170,11 @@ video {
 
 @media screen and (min-width: 1024px) {
   .grid-aside {
-    /* grid-template-columns: 3fr 2fr; */
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .grid-with-aside {
+    grid-template-columns: 2fr 8fr 2fr;
   }
 }
 
@@ -177,4 +186,62 @@ video {
 }
 
 @media screen and (min-width: 1536px) {
+}
+
+/* editorstyles */
+.w-md-editor {
+  background-color: #fff;
+  border: solid 1px #e4e4e7;
+  box-shadow: none;
+}
+
+.w-md-editor-toolbar {
+  background-color: #fff;
+  border-bottom: none;
+}
+
+.w-md-editor-toolbar ul li button {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  color: #4b5563;
+}
+
+.w-md-editor-toolbar li.active > button {
+  background-color: #e4e4e7;
+  color: black;
+}
+
+.w-md-editor-toolbar ul li button:hover,
+.w-md-editor-toolbar ul li button:active {
+  background-color: #f4f4f5;
+  color: black;
+}
+
+.wmde-markdown {
+  background-color: #fff !important;
+  color: black !important;
+}
+
+.wmde-markdown hr {
+  background-color: #fff;
+}
+
+.w-md-markdown code {
+  background-color: #d4d4d8;
+}
+
+.w-md-editor-area {
+  color: black;
+  outline: none;
+}
+
+.wmde-markdown table tr {
+  background-color: #fff;
+}
+
+.wmde-markdown table td {
+  background-color: #f4f4f5;
 }

@@ -11,7 +11,9 @@ const HomePage = () => {
           <Card>
             <header className="flex justify-between items-center">
               <h4 className="text-3xl font-semibold">Questions</h4>
-              <ButtonPrimary3D href="/ask">Ask a Question</ButtonPrimary3D>
+              <ButtonPrimary3D href="/questions/ask">
+                Ask a Question
+              </ButtonPrimary3D>
             </header>
           </Card>
         </section>

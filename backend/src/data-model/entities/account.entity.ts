@@ -7,7 +7,7 @@ import {
 
 @Entity()
 export class Account {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn('uuid')
   id: number;
 
   @Column({ nullable: false })
