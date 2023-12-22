@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.redstoneexchange.backend.models.Message;
+import com.example.redstoneexchange.backend.data.models.Message;
 
 import lombok.RequiredArgsConstructor;
 

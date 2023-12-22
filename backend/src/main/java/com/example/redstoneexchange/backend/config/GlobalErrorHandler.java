@@ -1,6 +1,6 @@
 package com.example.redstoneexchange.backend.config;
 
-import com.example.redstoneexchange.backend.models.ErrorMessage;
+import com.example.redstoneexchange.backend.data.models.ErrorMessage;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;

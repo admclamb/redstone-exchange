@@ -2,7 +2,7 @@ package com.example.redstoneexchange.backend.services;
 
 import org.springframework.stereotype.Service;
 
-import com.example.redstoneexchange.backend.models.Message;
+import com.example.redstoneexchange.backend.data.models.Message;
 
 @Service
 public class MessageService {
