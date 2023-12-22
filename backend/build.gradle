@@ -1,10 +1,8 @@
 plugins {
-  id 'checkstyle'
   id 'java'
 
   id 'io.spring.dependency-management' version '1.1.3'
   id 'org.springframework.boot' version '3.1.3'
-  id 'se.solrike.sonarlint' version '1.0.0-beta.15'
 }
 
 group = 'com.example'
@@ -15,9 +13,6 @@ dependencyLocking {
   lockAllConfigurations()
 }
 
-checkstyle {
-  toolVersion = '10.3'
-}
 
 configurations {
   compileOnly {
@@ -34,7 +29,6 @@ dependencies {
   annotationProcessor('org.springframework.boot:spring-boot-configuration-processor')
   compileOnly('org.projectlombok:lombok')
   developmentOnly('org.springframework.boot:spring-boot-devtools')
-  sonarlintPlugins('org.sonarsource.java:sonar-java-plugin:7.21.0.31796')
 
   implementation('io.github.cdimascio:dotenv-java:3.0.0')
   implementation('me.paulschwarz:spring-dotenv:4.0.0')
