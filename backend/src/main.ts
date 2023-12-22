@@ -16,7 +16,6 @@ function checkEnvironment(configService: ConfigService) {
     'POSTGRESQL_USERNAME',
     'POSTGRESQL_PASSWORD',
     'POSTGRESQL_NAME',
-    'OPENAI_API_KEY',
   ];
 
   requiredEnvVars.forEach((envVar) => {
